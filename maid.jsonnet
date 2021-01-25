@@ -1,4 +1,4 @@
-local config = import "config.jsonnet";
+local config = import 'config.jsonnet';
 
 function(modules)
   std.flattenArrays(
