@@ -4,7 +4,7 @@ Maid is a declarative config manager used to provide one config language for all
 Warning: Maid **WILL** overwrite your config files if you tell it to. I recommend backing up your configs before using maid.
 
 ## Installation
-> Eventually maid will switch to a proper install
+> Note: Eventually maid will switch to a proper install
 
 Maid only requires the golang compiler to be installed.
 ```
