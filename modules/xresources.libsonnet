@@ -13,7 +13,7 @@ local toProp = function(prop, level = 0)
 
 {
   enabled: false,
-  actions: [{type: "file", contents: std.lines(toProp($.config))}],
+  actions: [{path: "~/.Xresources", contents: std.lines(toProp($.properties))}],
   xft(font)::
     std.join(":",
       ["xft", font.name] + 
@@ -23,5 +23,5 @@ local toProp = function(prop, level = 0)
         std.objectFields(font)
       )
     ),
-  config: {}
+  properties: {}
 }

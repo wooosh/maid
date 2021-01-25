@@ -1,8 +1,20 @@
-local modules = import 'modules.libsonnet';
-
+function(modules)
+[
+    modules.bashrc {
+    enabled: true,
+    environment: {
+      PS1: "\\W:",
+      EDITOR: "vim"
+    },
+    raw: |||
+      xman () {
+        urxvt -name manpager -e man "$1" &
+      }
+    |||
+  },
   modules.xresources {
     enabled: true,
-    config: {
+    properties: {
       scrollBar: false,
       scrollBar_right: false,
       internalBorder: 8,
@@ -20,3 +32,4 @@ local modules = import 'modules.libsonnet';
       },
     },
   }
+]
