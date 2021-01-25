@@ -15,15 +15,5 @@ local toProp = function(prop, level=0)
 {
   enabled: false,
   actions: [{ path: '~/.Xresources', contents: std.lines(toProp($.properties)) }],
-  xft(font)::
-    std.join(
-      ':',
-      ['xft', font.name] +
-      std.filterMap(
-        function(prop) prop != 'name',
-        function(prop) prop + '=' + font[prop],
-        std.objectFields(font)
-      )
-    ),
   properties: {},
 }
